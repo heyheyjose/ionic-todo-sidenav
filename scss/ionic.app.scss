@@ -15,9 +15,19 @@ $royal:                           #886aea !default;
 $dark:                            #444 !default;
 */
 
+$positive:                        #3FC380 !default;
+$energized:                       #F5D76E !default;
+$calm:                            #52B3D9 !default;
+
 // The path for our ionicons font files, relative to the built CSS in www/css
 $ionicons-font-path: "../lib/ionic/fonts" !default;
 
 // Include all of Ionic
 @import "www/lib/ionic/scss/ionic";
 
+$app-main-bg: "../img/GoldenGate.jpeg";
+
+.scroll-bg {
+	background: url($app-main-bg) no-repeat center center fixed;
+	background-size: cover;
+}

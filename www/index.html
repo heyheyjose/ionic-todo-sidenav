@@ -24,7 +24,7 @@
       <!-- center content -->
       <ion-side-menu-content>
 
-        <ion-header-bar class="bar-dark">
+        <ion-header-bar class="bar-calm">
           <button class="button button-icon" ng-click="toggleProjects()">
             <i class="icon ion-navicon"></i>
           </button>
@@ -35,7 +35,7 @@
           </button>
         </ion-header-bar>
 
-        <ion-content scroll="false">
+        <ion-content class="scroll-bg">
           <!-- list and list items -->
           <ion-list>
             <ion-item ng-repeat="task in activeProject.tasks">
@@ -49,12 +49,12 @@
       <!-- left menu -->
       <ion-side-menu side="left">
 
-        <ion-header-bar class="bar-dark">
+        <ion-header-bar class="bar-energized">
           <h1 class="title">Projects</h1>
           <button class="button button-icon ion-plus" ng-click="newProject()"></button>
         </ion-header-bar>
 
-        <ion-content scroll="false">
+        <ion-content scroll="false" class="menu-main-bg">
           <ion-list>
             <ion-item ng-repeat="project in projects" ng-click="selectProject(project, $index)" ng-class="{active: activeProject == project}">
               {{project.title}}
@@ -80,7 +80,7 @@
             <form ng-submit="createTask(task)">
               <div class="list">
                 <label class="item item-input">
-                  <input type="text" placeholder="What do you need to do?" ng-model="task.title">
+                  <input type="text" placeholder="What do you need to do?" autofocus ng-model="task.title">
                 </label>
               </div>
               <div class="padding">
